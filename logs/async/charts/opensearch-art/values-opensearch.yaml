@@ -14,7 +14,7 @@ opensearch:
     - data
     - remote_cluster_client
 
-  replicas: 2
+  replicas: 1
 
   # if not set, falls back to parsing .Values.imageTag, then .Chart.appVersion.
   majorVersion: ""
@@ -127,11 +127,11 @@ opensearch:
   # additionals labels
   labels: {}
 
-  opensearchJavaOpts: "-Xmx1024M -Xms1024M"
+  opensearchJavaOpts: "-Xmx512M -Xms512M"
 
   resources:
     requests:
-      cpu: "1000m"
+      cpu: "200m"
       memory: "100Mi"
 
   initResources: {}
@@ -194,10 +194,10 @@ opensearch:
     #   set, choosing the default provisioner.  (gp2 on AWS, standard on
     #   GKE, AWS & OpenStack)
     #
-    storageClass: "managed-nfs-storage"
+    storageClass: "nfs-client"
     accessModes:
       - ReadWriteOnce
-    size: 8Gi
+    size: 2Gi
     annotations: {}
 
   extraVolumes: []
@@ -495,7 +495,7 @@ opensearch-dashboards:
       # kubernetes.io/tls-acme: "true"
     ingressClassName: "system-ingress"
     hosts:
-      - host: kibana.kryukov.local
+      - host: kibana.192.168.30.40.nip.io
         paths:
           - path: /
             backend:
