@@ -140,7 +140,7 @@ opensearch:
 
   resources:
     requests:
-      cpu: "1000m"
+      cpu: "200m"
       memory: "100Mi"
 
   initResources: {}
