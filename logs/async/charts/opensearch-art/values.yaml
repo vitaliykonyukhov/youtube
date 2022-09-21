@@ -624,7 +624,8 @@ opensearch-dashboards:
   updateStrategy:
     type: "Recreate"
 
-  nodeSelector: {}
+  nodeSelector: 
+    kubernetes.io/hostname: test3
 
   tolerations: []
 
