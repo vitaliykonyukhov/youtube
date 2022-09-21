@@ -10,4 +10,4 @@ dependencies:
   version: 2.6.0
 - name: opensearch-dashboards
   repository: https://opensearch-project.github.io/helm-charts
-  version: 2.5.0
+  version: 2.5.2
