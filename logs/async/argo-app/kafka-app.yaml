@@ -12,11 +12,11 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: logs/async/charts/kafka-art
-    repoURL: 'https://github.com/BigKAA/youtube'
+    repoURL: 'https://github.com/vitaliykonyukhov/youtube.git'
     targetRevision: master
     helm:
       valueFiles:
-        - values-kafka.yaml
+        - values.yaml
   project: default
   syncPolicy:
     automated:
