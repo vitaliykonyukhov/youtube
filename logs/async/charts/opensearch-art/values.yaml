@@ -53,7 +53,7 @@ opensearch:
 
       # Setting network.host to a non-loopback address enables the annoying bootstrap checks. "Single-node" mode disables them again.
       # Implicitly done if ".singleNode" is set to "true".
-      # discovery.type: single-node
+      discovery.type: single-node
 
       # Start OpenSearch Security Demo Configuration
       # WARNING: revise all the lines below before you go into production
@@ -141,7 +141,7 @@ opensearch:
   resources:
     requests:
       cpu: "200m"
-      memory: "100Mi"
+      memory: "512Mi"
 
   initResources: {}
   #  limits:
@@ -188,7 +188,7 @@ opensearch:
   persistence:
     enabled: true
     # Set to false to disable the `fsgroup-volume` initContainer that will update permissions on the persistent disk.
-    enableInitChown: true
+    enableInitChown: false
     # override image, which is busybox by default
     # image: busybox
     # override image tag, which is latest by default
