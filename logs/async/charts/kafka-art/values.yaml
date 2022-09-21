@@ -95,7 +95,7 @@ kafka:
 
   ## @param replicaCount Number of Kafka nodes
   ##
-  replicaCount: 2
+  replicaCount: 1
   livenessProbe:
     enabled: true
     initialDelaySeconds: 10
@@ -215,7 +215,7 @@ kafka:
     podManagementPolicy: Parallel
     ## @param zookeeper.replicaCount Number of ZooKeeper nodes
     ##
-    replicaCount: 2
+    replicaCount: 1
     persistence:
       enabled: true
       storageClass: "nfs-storage"
