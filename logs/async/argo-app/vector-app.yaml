@@ -12,11 +12,11 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: logs/async/charts/vector-art
-    repoURL: 'https://github.com/BigKAA/youtube'
+    repoURL: 'https://github.com/vitaliykonyukhov/youtube.git'
     targetRevision: master
     helm:
       valueFiles:
-        - values-vector-opensearch.yaml
+      - values-vector-opensearch.yaml
   project: default
   syncPolicy:
     automated:

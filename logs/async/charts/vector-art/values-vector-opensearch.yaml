@@ -47,7 +47,7 @@ vector:
   # resources -- Set Vector resource requests and limits.
   resources:
     requests:
-      cpu: 200m
+      cpu: 100m
       memory: 256Mi
     limits:
       cpu: 200m
@@ -182,10 +182,10 @@ vector:
 
   persistence:
     enabled: true
-    storageClassName: "managed-nfs-storage"
+    storageClassName: "nfs-storage"
     accessModes:
       - ReadWriteOnce
-    size: 10Gi
+    size: 2Gi
     finalizers:
       - kubernetes.io/pvc-protection
 
