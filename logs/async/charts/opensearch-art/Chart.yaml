@@ -2,7 +2,8 @@ apiVersion: v2
 name: opensearch-art
 description: Opensearch Stack chart for ArgoCD
 type: application
-version: 0.1.0
+appVersion: 2.3.0
+version: 2.6.0
 dependencies:
 - name: opensearch
   repository: https://opensearch-project.github.io/helm-charts
