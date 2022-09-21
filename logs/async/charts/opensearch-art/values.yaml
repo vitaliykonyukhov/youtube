@@ -594,7 +594,7 @@ opensearch-dashboards:
 
       # kubernetes.io/tls-acme: "true"
     hosts:
-      - host: dashboard.192.168.30.40.nip.io
+      - host: dashboard.192.168.30.45.nip.io
         paths:
           - path: /
             backend:
