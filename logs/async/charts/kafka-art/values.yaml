@@ -1,7 +1,7 @@
 kafka:
   enabled: true
   global:
-    storageClass: "managed-nfs-storage"
+    storageClass: "nfs-storage"
 
   nameOverride: "kafka"
   fullnameOverride: "kafka"
