@@ -16,7 +16,7 @@ spec:
     targetRevision: master
     helm:
       valueFiles:
-        - values-opensearch.yaml
+        - values-opensearch-new.yaml
   project: default
   syncPolicy:
     automated:
